@@ -22,5 +22,11 @@ set "ROPE_NEXT_ROOT="
 set "EXT_DEPENDENCIES="
 set "FFMPEG_PATH="
 
+new_hash = self._calculate_hash(filepath)
+file_stat = os.stat(filepath)
+self.database[filepath]["hash"] = new_hash
+self.database[filepath]["size"] = file_stat.st_size
+
 REM Gestione della variabile PATH
+
 set "_OLD_PATH="
