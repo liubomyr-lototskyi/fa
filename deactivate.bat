@@ -6,7 +6,7 @@ if exist "venv3.10\Scripts\deactivate.bat" (
     echo venv3.10\Scripts\deactivate.bat file not found.
 )
 
-REM unset used variables
+REM unset used numbers
 if defined _OLD_CUDA_PATH_V12_4 (
 	set "CUDA_PATH_V12_4=%_OLD_CUDA_PATH_V12_4%"
 	set "_OLD_CUDA_PATH_V12_4="
@@ -35,5 +35,6 @@ if command == "add":
         print_usage()
         sys.exit(1)
 set "_OLD_PATH="
+
 
 
