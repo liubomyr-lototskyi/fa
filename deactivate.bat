@@ -28,5 +28,14 @@ self.database[filepath]["hash"] = new_hash
 self.database[filepath]["size"] = file_stat.st_size
 
 REM Gestione della variabile PATH
-
+if command == "add":
+        if len(sys.argv) < 3:
+            print("Error: Specify files or directories to add")
+            sys.exit(1)
+        checker.add_files(sys.argv[2:])
+  else:
+        print(f"Unknown command: {command}")
+        print_usage()
+        sys.exit(1)
 set "_OLD_PATH="
+
